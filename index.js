@@ -11,9 +11,9 @@ const axios = require("axios"); // added last
 app.use(
   cors({
     origin: [
-      "https://medcampconnect-5fdc3.web.app",
+      "https://techzen-d931f.web.app",
       "http://localhost:5173",
-      "https://medcampconnect-5fdc3.firebaseapp.com",
+      "https://techzen-d931f.firebaseapp.com",
     ],
     credentials: true,
     optionsSuccessStatus: 200,
@@ -55,9 +55,6 @@ async function run() {
     const db = client.db("TechZen");
     const productsCollection = db.collection("products");
     const usersCollection = db.collection("users");
-    // const bookingCollection = db.collection("bookings");
-    // const feedbackCollection = db.collection("feedbacks");
-    // const sliderCollection = db.collection("SliderData");
 
     // auth related api
     app.post("/jwt", async (req, res) => {
